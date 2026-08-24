@@ -31,7 +31,7 @@ class OnboardingContinerPage extends StatelessWidget {
                 CircleAvatar(
                   radius: 125.r,
                   backgroundColor: ColorManager.redLowOpacity,
-                  child: SvgPicture.asset(svgIcon),
+                  child: SvgPicture.asset(svgIcon, width: 88.w, height: 88.h),
                 ),
                 SizedBox(height: 50.h),
                 Text(
