@@ -3,7 +3,7 @@ import 'package:forge/core/routing/router.dart';
 import 'package:forge/core/theming/style.dart';
 
 class SignUpButton extends StatelessWidget {
-  const new({super.key,});
+  const new({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class SignUpButton extends StatelessWidget {
         ),
         TextButton(
           onPressed: () {
-            Navigator.pushNamed(context, Routes.signUpgScreen);
+            Navigator.pushNamed(context, Routes.signUpScreen);
           },
           child: Text('Sign Up', style: TextStyles.fontInter14RedBold),
         ),

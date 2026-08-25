@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
+import 'package:forge/core/routing/router.dart';
 import 'package:forge/core/theming/color.dart';
 import 'package:forge/core/theming/style.dart';
 
@@ -20,7 +21,9 @@ class ButtonSignUp extends StatelessWidget {
           ),
         ),
         onPressed: () {
-          if (!fromKey.currentState!.validate()) {}
+          if (fromKey.currentState!.validate()) {
+            Navigator.pop(context);
+          }
         },
         child: Text('Sign Up', style: TextStyles.fontInter16WhiteBold),
       ),

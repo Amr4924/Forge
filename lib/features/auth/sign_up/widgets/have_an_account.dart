@@ -14,7 +14,9 @@ class HaveAnAccount extends StatelessWidget {
           style: TextStyles.font15LightGreyRegularWeight,
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           child: Text('Log In', style: TextStyles.fontInter14RedBold),
         ),
       ],

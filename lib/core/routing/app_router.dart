@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:forge/core/routing/router.dart';
 import 'package:forge/features/auth/login/login_screen.dart';
 import 'package:forge/features/auth/sign_up/sign_up.dart';
+import 'package:forge/features/home/ui/home_screen.dart';
 import 'package:forge/features/onboarding/onbording_screen.dart';
 
 class AppRouter {
@@ -11,8 +12,10 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const OnboardingScreen());
       case Routes.logingScreen:
         return MaterialPageRoute(builder: (_) => const LoginScreen());
-      case Routes.signUpgScreen:
+      case Routes.signUpScreen:
         return MaterialPageRoute(builder: (_) => const SignUpScreen());
+      case Routes.homeScreen:
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
       default:
         return MaterialPageRoute(
           builder: (_) {
