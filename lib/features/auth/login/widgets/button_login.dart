@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
+import 'package:forge/core/routing/router.dart';
 import 'package:forge/core/theming/color.dart';
 import 'package:forge/core/theming/style.dart';
 
 class ButtonLogin extends StatelessWidget {
   final GlobalKey<FormState> formkey;
 
-  const new({super.key,required this.formkey});
+  const new({super.key, required this.formkey});
 
   @override
   Widget build(BuildContext context) {
@@ -14,10 +15,15 @@ class ButtonLogin extends StatelessWidget {
       width: 342.w,
       height: 56.h,
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(backgroundColor: ColorManager.redMain),
+        style: ElevatedButton.styleFrom(
+          backgroundColor: ColorManager.redMain,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16.r),
+          ),
+        ),
         onPressed: () {
-          if(!formkey.currentState!.validate()){
-
+          if (formkey.currentState!.validate()) {
+            Navigator.pushNamed(context, Routes.homeScreen);
           }
         },
         child: Text('Log In', style: TextStyles.fontInter16WhiteBold),

@@ -35,7 +35,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     const TearmAndCondtionsBox(),
                     ButtonSignUp(fromKey: formKey),
                     const Spacer(),
-                    HaveAnAccount(),
+                    const HaveAnAccount(),
                     SizedBox(height: 16.r),
                   ],
                 ),

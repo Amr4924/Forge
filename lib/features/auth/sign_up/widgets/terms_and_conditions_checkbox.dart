@@ -14,26 +14,33 @@ class _TearmAndCondtionsBoxState extends State<TearmAndCondtionsBox> {
   bool confirmation = false;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Checkbox(
-          value: confirmation,
-          onChanged: (value) {
-            setState(() {
-              confirmation = value!;
-            });
-          },
-          activeColor: ColorManager.redMain,
-          side: BorderSide(color: ColorManager.lightGrey),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadiusGeometry.circular(4.r),
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          confirmation = !confirmation;
+        });
+      },
+      child: Row(
+        children: [
+          Checkbox(
+            value: confirmation,
+            onChanged: (value) {
+              setState(() {
+                confirmation = value!;
+              });
+            },
+            activeColor: ColorManager.redMain,
+            side: BorderSide(color: ColorManager.lightGrey),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadiusGeometry.circular(4.r),
+            ),
           ),
-        ),
-        Text(
-          'I agree to the Terms & Privacy Policy',
-          style: TextStyles.font15LightGreyRegularWeight,
-        ),
-      ],
+          Text(
+            'I agree to the Terms & Privacy Policy',
+            style: TextStyles.font15LightGreyRegularWeight,
+          ),
+        ],
+      ),
     );
   }
 }
