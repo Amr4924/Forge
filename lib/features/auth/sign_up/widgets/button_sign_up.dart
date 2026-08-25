@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
-import 'package:forge/core/routing/router.dart';
 import 'package:forge/core/theming/color.dart';
 import 'package:forge/core/theming/style.dart';
 
